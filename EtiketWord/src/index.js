@@ -7,6 +7,10 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+const cors = require("cors");
+
+app.use(cors());
+
 app.use(bodyParser.json());
 
 app.use("/opinions", wordRouter);
